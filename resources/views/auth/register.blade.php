@@ -1,4 +1,101 @@
-@extends('layouts.app')
+  @extends('layouts.welcome')
+  @section('content')
+      <div class="card-body">
+          <div class="card-title">Create your account</div>
+          <form method="POST" action="{{ route('register') }}">
+              @csrf
+              <div class="form-group">
+                  <label class="form-label">Nom</label>
+
+                  <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1"
+                      aria-describedby="emailHelp" placeholder="Entrer nom" name="name">
+                  @error('name')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+              </div>
+              <div class="form-group">
+                  <label class="form-label">Email</label>
+
+                  <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail1"
+                      aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                  @error('email')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+              </div>
+
+              <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <input type="password" class="form-control @error('password') is-invalid @enderror"
+                      id="exampleInputPassword1" placeholder="Password" name="password" required
+                      autocomplete="current-password">
+
+                  @error('password')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+              </div>
+              <div class="form-group">
+                  <label class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" name="password_confirmation" required
+                      autocomplete="new-password">
+
+                  @error('password')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+              </div>
+              <div class="form-footer">
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+              </div>
+          </form>
+      </div>
+      <div class="text-center text-muted">
+          Already have account? <a href="{{ route('login') }}">Sign in</a>
+      </div>
+  @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -74,4 +171,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}
