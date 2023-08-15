@@ -6,7 +6,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12">
                     <div class="mb-4">
-                        <h4>Welcome Peter Richards!</h4>
+                        <h4>Welcome Peter Richardssssss!</h4>
                         <small>Measure How Fast You’re Growing Monthly Recurring Revenue.
                             <a href="#">Learn More</a></small>
                     </div>
